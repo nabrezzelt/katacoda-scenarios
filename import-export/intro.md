@@ -47,10 +47,10 @@ Ein Datensatz aus 2 Kunden würde dabei folgendermaßen aussehen:
 ```
 
 Kunden:
-| Kd-Nr | Vorname | Nachname |
-| ----- | ------- | -------- |
-| 1     | Hans    | Maier    |
-| 2     | Peter   | Müller   |
+| Kundennr | Vorname | Nachname |
+| -------- | ------- | -------- |
+| 1        | Hans    | Maier    |
+| 2        | Peter   | Müller   |
 
 Daten können im JSON-Format, im vergleich zu CSV-Dateien, beliebig oft geschachtelt werden.
 

@@ -23,6 +23,7 @@
             }
         ],
         "intro": {
+            "code": "init-environment.sh",
             "text": "intro.md"
         },
         "finish": {
