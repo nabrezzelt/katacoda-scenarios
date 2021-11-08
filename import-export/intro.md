@@ -52,6 +52,6 @@ Kunden:
 | 1        | Hans    | Maier    |
 | 2        | Peter   | Müller   |
 
-Daten können im JSON-Format, im vergleich zu CSV-Dateien, beliebig oft geschachtelt werden.
+Daten können im JSON-Format - im Vergleich zu CSV-Dateien - beliebig oft geschachtelt werden.
 
 

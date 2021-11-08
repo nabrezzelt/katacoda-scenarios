@@ -28,6 +28,12 @@
         },
         "finish": {
             "text": "finish.md"
+        },
+        "assets": {
+            "host01": {
+                "file": "person-data.sql",
+                "target": "/root"
+            }
         }
     },
     "environment": {
