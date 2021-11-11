@@ -26,24 +26,44 @@ Wird nur ein Tabellennamen angegeben, werden alle Spalten in die CSV-Datei gesch
 
 Zusätzlich kann in Klammern angegeben werden ob z. B. nur einzelne Spalten exportiert werden sollen.
 
-Die folgende Abfrage exportiert nun alle Spalten der Tabelle `persons` und gibt diese auf der Standardausgabe aus.
+Die folgende Abfrage exportiert nun alle Spalten der Tabelle `persons` und gibt diese auf der Standardausgabe aus. Getrennt werden die Spalten dabei mittels eines `;`.
 ```sql
 COPY persons
-TO STDOUT;
-``` {{execute}}
+TO STDOUT (DELIMITER ';');
+```
+{{execute}}
 
-Wenn nur die Spalten `Id` und `Name` ausgegeben werden sollen:
+Wenn nur die `Name`-Spalte ausgegeben werden soll:
 
 ```sql
-COPY persons(Id, Name)
-TO STDOUT;
-``` {{execute}}
+COPY persons(Name)
+TO STDOUT (DELIMITER ';');
+```
+{{execute}}
 
 Zudem ist es möglich auch eine SQL-Abfrage anzugeben, wenn z. B. alle Personen mit einer bestimmten PLZ exportiert werden sollen:
 
 ```sql
-COPY (SELECT * FROM persons WHERE ZipCode = 12345)
-TO STDOUT;
-``` {{execute}}
+COPY (SELECT * FROM persons WHERE ZipCode = 10117)
+TO STDOUT (DELIMITER ';');
+``` 
+{{execute}}
 
 ### `TO { file_name | STDOUT }`
+Im `TO`-Abschnitt der Abfrage kann ausgewählt werden wohin die Daten exportiert werden sollen. Dabei ist STDOUT die Standardausgabe auf der Konsole. Um Daten in eine Datei zu exportieren muss alternativ der Dateiname angegeben werden.
+
+### `options`
+Im letzten Abschnitt der Abfrage können verschiedene Optionen angegeben werden. Eine der Wichtigsten ist dabei z. B. ob ein Header mit ausgegeben werden soll.
+
+#### `HEADER`
+Ausgegeben wird dieser durch die Option: `CSV HEADER`
+
+Bsp.:
+```sql
+COPY persons
+TO STDOUT DELIMITER ';' CSV HEADER;
+``` 
+{{execute}}
+
+#### `QUOTE` und `ESCAPE`
+Mittels den Optionen `QUOTE` und `ESCAPE` können Anpassungen der Textbegrenzungszeichen und Escape-Zeichen gemacht werden.

@@ -17,11 +17,12 @@ Zudem ist es möglich (optional), innerhalb der Datei eine Kopfzeile zu definier
 
 Grundlegend wird ein Standard für das Format von CSV-Dateien in [RFC4180](https://datatracker.ietf.org/doc/html/rfc4180) beschrieben.
 
-Ein Datensatz von 2 Kunden sieht im CSV-Format folgendermaßen aus:
+Ein Datensatz von 2 Kunden sieht im CSV-Format (mit Kopfzeile) folgendermaßen aus:
 
 ```CSV
-1;Hans;Maier
-2;Peter;Müller
+Kd-Nr:Vorname;Nachname              <-- Kopfzeile
+1;Hans;Maier                        <-- Datensatz 1
+2;Peter;Müller                      <-- Datensatz 2
 ```
 
 ## JSON-Dateien
@@ -47,6 +48,7 @@ Ein Datensatz aus 2 Kunden würde dabei folgendermaßen aussehen:
 ```
 
 Kunden:
+
 | Kundennr | Vorname | Nachname |
 | -------- | ------- | -------- |
 | 1        | Hans    | Maier    |
@@ -54,4 +56,4 @@ Kunden:
 
 Daten können im JSON-Format - im Vergleich zu CSV-Dateien - beliebig oft geschachtelt werden.
 
-
+In den nachfolgenden Schritten 2-5 werden Import und Export Beispiele für CSV und JSON-Dateien vorgestellt.

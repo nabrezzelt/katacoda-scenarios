@@ -1,3 +1,7 @@
+CREATE DATABASE "sample";
+
+\c sample
+
 DROP TABLE IF EXISTS "persons";
 
 CREATE TABLE "persons" (
@@ -8,6 +12,6 @@ CREATE TABLE "persons" (
 
 INSERT INTO persons (name, ZipCode)
 VALUES
-  ('Hans Wurst',12790),
-  ('Hans Dampf',58183),
-  ('Karl Napf',844168);
+  ('Hans Wurst',60437),
+  ('Hans Dampf',10117),
+  ('Karl Napf',60439);
