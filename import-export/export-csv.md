@@ -27,6 +27,7 @@ Wird nur ein Tabellennamen angegeben, werden alle Spalten in die CSV-Datei gesch
 Zusätzlich kann in Klammern angegeben werden ob z. B. nur einzelne Spalten exportiert werden sollen.
 
 Die folgende Abfrage exportiert nun alle Spalten der Tabelle `persons` und gibt diese auf der Standardausgabe aus. Getrennt werden die Spalten dabei mittels eines `;`.
+
 ```sql
 COPY persons
 TO STDOUT (DELIMITER ';');
@@ -54,7 +55,10 @@ Im `TO`-Abschnitt der Abfrage kann ausgewählt werden wohin die Daten exportiert
 ### `options`
 Im letzten Abschnitt der Abfrage können verschiedene Optionen angegeben werden. Eine der Wichtigsten ist dabei z. B. ob ein Header mit ausgegeben werden soll.
 
-#### `HEADER`
+#### `DELIMITER`
+Die `DELIMITER`-Option gibt an, wie die einzelnen Spalten von einander abgetrennt sind.
+
+#### `CSV HEADER`
 Ausgegeben wird dieser durch die Option: `CSV HEADER`
 
 Bsp.:
@@ -67,3 +71,6 @@ TO STDOUT DELIMITER ';' CSV HEADER;
 Mittels den Optionen `QUOTE` und `ESCAPE` können Anpassungen der Textbegrenzungszeichen und Escape-Zeichen gemacht werden.
 
 Weitere Informationen zu den sonst unterstützten Optionen des Befehls sind auf der Dokumentationsseite  von PostgreSQL zu finden.
+
+### Quellen
+https://www.postgresql.org/docs/9.2/sql-copy.html
