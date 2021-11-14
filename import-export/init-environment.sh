@@ -8,3 +8,5 @@ sleep 2
 psql -U postgres -f /data/person-data.sql
 
 psql -U postgres
+
+\c sample
