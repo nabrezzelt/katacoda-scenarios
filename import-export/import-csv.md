@@ -33,22 +33,38 @@ Weitere Informationen zu den sonst unterstützten Optionen des Befehls sind auf 
 Führe den den folgenden Befehl aus um den Inhalt der Datei `more-persons.csv` einzusehen:
 
 ```
-\! cat person-data.sql
+\! cat /data/more-persons.csv
 ```{{execute}}
 
 Da hier ersichtlich ist, dass die Datei einen Header enthält und durch `;` getrennt ist, muss dies in dem Import-Befehl angegeben werden.
 
 Dieser sieht dann folgendermaßen aus:
 
-```
-\copy persons FROM '\data\more-persons.csv' DELIMITER ';' CSV HEADER
-```{{execute}}
 
 ```sql
 COPY persons 
-FROM PROGRAM 'cat \data\more-persons.csv' 
+FROM PROGRAM 'cat /data/more-persons.csv' 
 DELIMITER ';' 
 CSV HEADER;
+```{{execute}}
+
+Da der Datenbank-Benutzer oftmals keinen Zugriff auf das lokale Datenbanksystem besitzt muss hier mit dem PROGRAM-Befehl gearbeitet werden, der einen Befehl auf dem Client ausführt und dann die Eingabe für den Import verwendet.
+
+Alternativ kann hierzu auf der `\copy` Befehl des psql-Clients verwendet werden:
+
+```
+\copy persons FROM '/data/more-persons.csv' DELIMITER ';' CSV HEADER
+```
+
+Dieser führt zum gleichen Ergebnis wie der `COPY`-Befehl, abgesehen davon, dass der Inhalt der Datei auf clientseite interpretiert wird und so vom Server kein Zugriff auf die Datei notwendig ist.
+
+Vom Aufbau unterscheidet dieser sich nur darin, dass `COPY` weggelassen wird und der Befehl in einer Zeile stehen muss.
+
+Nach dem erfolgreichen Import, sollten nun die importierten Daten in der Tabelle stehen:
+
+```sql
+SELECT * 
+FROM persons;
 ```{{execute}}
 
 
