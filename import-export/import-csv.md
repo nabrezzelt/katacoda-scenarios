@@ -69,4 +69,5 @@ FROM persons;
 
 
 ### Quellen
-https://www.postgresql.org/docs/14/sql-copy.html
+- https://www.postgresql.org/docs/14/sql-copy.html
+- https://www.postgresqltutorial.com/import-csv-file-into-posgresql-table/
