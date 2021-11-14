@@ -14,14 +14,14 @@ Der Export läuft dabei grundlegend so ab, dass als erstes die Zeilen mittels `r
 
 ```sql
 SELECT row_to_json(persons)
-FROM persons
+FROM persons;
 ```{{execute}}
 
 und dann muttels und `json_agg()` zu einem JSON-Array zusammengefasst werden.
 
 ```sql
 SELECT json_agg(row_to_json(persons))
-FROM persons
+FROM persons;
 ```{{execute}}
 
 Danach kann dann wie in Schritt 1 bereits beschrieben diese Abfrage für den COPY-Befehl verwendet werden.
@@ -30,7 +30,7 @@ Danach kann dann wie in Schritt 1 bereits beschrieben diese Abfrage für den COP
 COPY (
     SELECT json_agg(row_to_json(persons))
     FROM persons
-) to '/tmp/person-data.json';
+) TO '/tmp/person-data.json';
 ```{{execute}}
 
 Somit ist sind alle Datensätze in die Datei `/tmp/person-data.json` exportiert worden:
