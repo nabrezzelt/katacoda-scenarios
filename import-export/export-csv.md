@@ -30,24 +30,23 @@ Die folgende Abfrage exportiert nun alle Spalten der Tabelle `persons` und gibt 
 ```sql
 COPY persons
 TO STDOUT (DELIMITER ';');
-```
-{{execute}}
+```{{execute}}
+
 
 Wenn nur die `Name`-Spalte ausgegeben werden soll:
 
 ```sql
 COPY persons(Name)
 TO STDOUT (DELIMITER ';');
-```
-{{execute}}
+```{{execute}}
+
 
 Zudem ist es möglich auch eine SQL-Abfrage anzugeben, wenn z. B. alle Personen mit einer bestimmten PLZ exportiert werden sollen:
 
 ```sql
 COPY (SELECT * FROM persons WHERE ZipCode = 10117)
 TO STDOUT (DELIMITER ';');
-``` 
-{{execute}}
+```{{execute}}
 
 ### `TO { file_name | STDOUT }`
 Im `TO`-Abschnitt der Abfrage kann ausgewählt werden wohin die Daten exportiert werden sollen. Dabei ist STDOUT die Standardausgabe auf der Konsole. Um Daten in eine Datei zu exportieren muss alternativ der Dateiname angegeben werden.
@@ -62,8 +61,9 @@ Bsp.:
 ```sql
 COPY persons
 TO STDOUT DELIMITER ';' CSV HEADER;
-``` 
-{{execute}}
+```{{execute}}
 
 #### `QUOTE` und `ESCAPE`
 Mittels den Optionen `QUOTE` und `ESCAPE` können Anpassungen der Textbegrenzungszeichen und Escape-Zeichen gemacht werden.
+
+Weitere Informationen zu den sonst unterstützten Optionen des Befehls sind auf der Dokumentationsseite  von PostgreSQL zu finden.

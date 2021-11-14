@@ -12,6 +12,6 @@ CREATE TABLE "persons" (
 
 INSERT INTO persons (name, ZipCode)
 VALUES
-  ('Hans Wurst',60437),
+  ('Hans Wurst;',60437),
   ('Hans Dampf',10117),
   ('Karl Napf',60439);
