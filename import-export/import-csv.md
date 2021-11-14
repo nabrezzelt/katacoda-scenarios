@@ -48,7 +48,7 @@ DELIMITER ';'
 CSV HEADER;
 ```{{execute}}
 
-Wichtig bei der Ausführung des Befehls ist, dass der Datenbankbenutzer Zugriff auf die zu importierende Datei haben muss. Aus diesem Grund, wurden die Daten bereits in das `/tmp`-Verzeichnis kopiert, auf das der Datenbank-Nutzer zugriff hat.Da der Datenbank-Benutzer oftmals keinen Zugriff auf das lokale Datenbanksystem besitzt muss hier mit dem `PROGRAM`-Befehl gearbeitet werden, der einen Befehl auf dem Client ausführt und dann die Eingabe für den Import verwendet.
+Wichtig bei der Ausführung des Befehls ist, dass der Datenbankbenutzer Zugriff auf die zu importierende Datei haben muss. Aus diesem Grund, wurden die Daten bereits in das `/tmp`-Verzeichnis kopiert, auf das der Datenbank-Nutzer Zugriff hat.
 
 Alternativ kann hierzu auf der `\copy` Befehl des psql-Clients verwendet werden:
 
