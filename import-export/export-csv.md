@@ -73,4 +73,4 @@ Mittels den Optionen `QUOTE` und `ESCAPE` können Anpassungen der Textbegrenzung
 Weitere Informationen zu den sonst unterstützten Optionen des Befehls sind auf der Dokumentationsseite  von PostgreSQL zu finden.
 
 ### Quellen
-https://www.postgresql.org/docs/9.2/sql-copy.html
+https://www.postgresql.org/docs/14/sql-copy.html
