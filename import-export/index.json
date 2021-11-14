@@ -32,7 +32,8 @@
         "assets": {
             "host01": [
                 { "file": "person-data.sql", "target": "/root" },
-                { "file": "more-persons.csv", "target": "/root" }
+                { "file": "more-persons.csv", "target": "/root" },
+                { "file": "more-persons2.json", "target": "/root" }
             ]
         }
     },

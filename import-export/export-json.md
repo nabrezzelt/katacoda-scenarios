@@ -17,7 +17,7 @@ SELECT row_to_json(persons)
 FROM persons;
 ```{{execute}}
 
-und dann muttels und `json_agg()` zu einem JSON-Array zusammengefasst werden.
+und dann mittels und `json_agg()` zu einem JSON-Array zusammengefasst werden.
 
 ```sql
 SELECT json_agg(row_to_json(persons))
