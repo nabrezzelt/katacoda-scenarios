@@ -1,4 +1,7 @@
 # Daten in eine JSON-Datei exportieren
+
+(Konsole leeren: `\! clear`{{execute}})
+
 Leider bietet PostgreSQL keine eingebaute Möglichkeit Daten ins JSON-Format zu exportieren.
 
 Aus diesem Grund müssen die zwei Funktionen `row_to_json()` und `json_agg()` in Verbindung mit dem `COPY`-Befehl verwendet werden.

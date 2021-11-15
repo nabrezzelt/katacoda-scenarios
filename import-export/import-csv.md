@@ -1,4 +1,7 @@
 # Daten aus einer CSV-Datei importieren
+
+(Konsole leeren: `\! clear`{{execute}})
+
 Um Datensätze aus einer CSV-Datei in eine Datenbank zu importieren kann ebenfalls der `COPY`-Befehl verwendet werden.
 
 Im nachfolgenden werden weitere Daten aus der Datei `more-persons.csv` importiert.
