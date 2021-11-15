@@ -1,4 +1,7 @@
 # Daten aus JSON Datei importieren
+
+(Konsole leeren: `\! clear`{{execute}})
+
 PostgeSQL bietet standardmäßig keine Option um JSON-Daten elegant zu importieren.
 
 Dies ist nur über Umwege möglich. Genutzt wird hierzu die Funktion `json_populate_recordset()`
@@ -8,7 +11,7 @@ Die Funktion `json_populate_recordset()` akzeptiert zwei Argumente. Das erste Ar
 
 Das folgende Statement gibt dann die Datensätze entsprechend ihrer Keys aufgeteilt aus:
 
-```sql
+```
 SELECT * FROM json_populate_recordset(null::persons,'[
     { "id": 7, "name": "Angela Fischer;", "zipcode": 91337 },
     { "id": 8, "name": "Birgit Bauer", "zipcode": 22117 },
@@ -18,7 +21,7 @@ SELECT * FROM json_populate_recordset(null::persons,'[
 
 Diese Abfrage kann mit einem `INSERT INTO` kombiniert werden um die Daten in die Tabelle einzufügen.
 
-```sql
+```
 INSERT INTO persons (id, name, zipCode)
 SELECT * FROM json_populate_recordset(null::persons, '[
     { "id": 7, "name": "Angela Fischer;", "zipcode": 91337 },
@@ -27,25 +30,28 @@ SELECT * FROM json_populate_recordset(null::persons, '[
 ]');
 ```
 
-Um die Daten nun über eine Datei einzulesen und nicht fest in ie Abfrage zu integrieren kann eine Variable genutzt werden, die den Inhalt der Datei ausliest und speichert:
+Um die Daten nun über eine Datei einzulesen und nicht fest in die Abfrage zu integrieren kann eine Variable genutzt werden, die den Inhalt der Datei ausliest und speichert:
 
-```sql
+```
 \set content `cat /tmp/more-persons2.json`
 \echo :content
-
-SELECT * 
-FROM json_populate_recordset(null::persons, :'content');
 ```{{execute}}
 
 Dabei wird mit `\set content ...` der Inhalt der Datei ausgelesen und in die Variable `content` gespeichert.
 
 Anschließend wird testweise die Variable ausgegeben.
 
+```
+SELECT * 
+FROM json_populate_recordset(null::persons, :'content');
+```{{execute}}
+
+
 Und dann mittels der Funktion `json_populate_recordset()` als `person` gemappt. Hierbei wird der Typ angegeben und dann mit dem `:` die `content`-Variable. Durch die Verwendung von `'` wird der Inhalt der Variable in einfache Hochkommata gesetzt, sodass dieser als JSON interpretiert werden kann.
 
 Durch die Kombination der Variable mit dem `INSERT INTO ... SELECT`-Befehl können so JSON-Daten importiert werden.
 
-```sql
+```
 INSERT INTO persons (id, name, zipCode)
 SELECT * 
 FROM json_populate_recordset(null::persons, :'content');
