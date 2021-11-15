@@ -15,21 +15,21 @@ Diese Funktion aggregiert mehrere JSON-Datensätze in einen JSON-Array.
 ## Export
 Der Export läuft dabei grundlegend so ab, dass als erstes die Zeilen mittels `row_to_json()` in einen JSON-Datensatz konvertiert werden 
 
-```sql
+```
 SELECT row_to_json(persons)
 FROM persons;
 ```{{execute}}
 
 und dann mittels und `json_agg()` zu einem JSON-Array zusammengefasst werden.
 
-```sql
+```
 SELECT json_agg(row_to_json(persons))
 FROM persons;
 ```{{execute}}
 
 Danach kann dann wie in Schritt 1 bereits beschrieben diese Abfrage für den COPY-Befehl verwendet werden.
 
-```sql
+```
 COPY (
     SELECT json_agg(row_to_json(persons))
     FROM persons
@@ -37,6 +37,7 @@ COPY (
 ```{{execute}}
 
 Somit ist sind alle Datensätze in die Datei `/tmp/person-data.json` exportiert worden:
+
 ```
 \! cat /tmp/person-data.json
 ```{{execute}}
