@@ -5,7 +5,7 @@ docker exec -it postgres bash
 
 cp /data/* /tmp
 
-sleep 2
+sleep 3
 
 psql -U postgres -f /data/person-data.sql
 
