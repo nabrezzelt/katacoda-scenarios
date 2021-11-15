@@ -1,4 +1,3 @@
-
 # CSV-Dateien
 CSV-Dateien (Comma-separated values) sind im Grund strukturierte Textdateien meist mit der Dateiendung ".csv".
 
@@ -12,20 +11,20 @@ Grundlegend wird ein Standard für das Format von CSV-Dateien in [RFC4180](https
 
 Ein Datensatz von 2 Kunden sieht im CSV-Format (mit Kopfzeile) folgendermaßen aus:
 
-```CSV
+```
 Kd-Nr:Vorname;Nachname              <-- Kopfzeile
 1;Hans;Maier                        <-- Datensatz 1
 2;Peter;Müller                      <-- Datensatz 2
 ```
 
 # JSON-Dateien
-JSON (JavaScript Object Notation) ist ein Dateiformat, welches für die einfachen Datenübertragung (Serialisierung) zwischen Anwendungen verwendet wird. Ein Standard wird hier in [RCF8259](https://tools.ietf.org/pdf/rfc8259.pdf) beschrieben
+JSON (JavaScript Object Notation) ist ein Dateiformat, welches für die einfache Datenübertragung (Serialisierung) zwischen Anwendungen verwendet wird. Ein Standard wird hier in [RCF8259](https://tools.ietf.org/pdf/rfc8259.pdf) beschrieben.
 
 Daten werden dabei einem Objekt zugeordnet, dessen Eigenschaften aus einem Schlüssel-Wert-Paar bestehen.
 
 Ein Datensatz aus 2 Kunden würde dabei folgendermaßen aussehen:
 
-```JSON
+```
 [
     {
         "Kd-Nr": 1,

@@ -6,19 +6,19 @@ Um Datensätze aus einer CSV-Datei in eine Datenbank zu importieren kann ebenfal
 
 Im nachfolgenden werden weitere Daten aus der Datei `more-persons.csv` importiert.
 
-Der Aufbau des Befehls ist analog zum Import, nur dass anstatt des `TO` ein `FROM` verwendet wird.
+Der Aufbau des Befehls ist analog zum Import, abgesehen davon, dass anstatt des `TO` ein `FROM` verwendet wird.
 
-```sql
+```
 COPY { table_name }
     FROM { file_name | STDIN }
     WITH options
 ```
 
 ### `{table_name }`
-Der `{table_name }` gibt an in wleche Tabelle die Daten importiert werden sollen.
+Der `{table_name }` gibt an in welche Tabelle die Daten importiert werden sollen.
 
 ### `FROM { file_name | STDIN }`
-Im `FROM`-Abschnitt der Abfrage muss dann der Dateiname angegeben werden, in den die Daten exportiert werden sollen. Alternativ können die daten auf von der Standardeingabe STDIN gelesen werden.
+Im `FROM`-Abschnitt der Abfrage muss dann der Dateiname angegeben werden, in den die Daten exportiert werden sollen. Alternativ können die Daten auf von der Standardeingabe STDIN gelesen werden.
 
 ### `options`
 Im letzten Abschnitt der Abfrage können erneut verschiedene Optionen angegeben werden.
@@ -30,10 +30,10 @@ Enthält die Datei einen Header, muss dies in dem Import-Befehlt angegeben werde
 #### `QUOTE` und `ESCAPE`
 Mittels den Optionen `QUOTE` und `ESCAPE` können Anpassungen der Textbegrenzungszeichen und Escape-Zeichen gemacht werden.
 
-Weitere Informationen zu den sonst unterstützten Optionen des Befehls sind auf der Dokumentationsseite  von PostgreSQL zu finden.
+Weitere Informationen zu den sonst unterstützten Optionen des Befehls sind auf der Dokumentationsseite von PostgreSQL zu finden.
 
 ### Beispiel Import der Datei `more-persons.csv`:
-Führe den den folgenden Befehl aus um den Inhalt der Datei `more-persons.csv` einzusehen:
+Führe den folgenden Befehl aus um den Inhalt der Datei `more-persons.csv` einzusehen:
 
 ```
 \! cat /data/more-persons.csv
@@ -44,7 +44,7 @@ Da hier ersichtlich ist, dass die Datei einen Header enthält und durch `;` getr
 Dieser sieht dann folgendermaßen aus:
 
 
-```sql
+```
 COPY persons 
 FROM '/tmp/more-persons.csv' 
 DELIMITER ';' 
@@ -65,7 +65,7 @@ Vom Aufbau unterscheidet dieser sich nur darin, dass `COPY` zu Beginn weggelasse
 
 Nach dem erfolgreichen Import, sollten nun die importierten Daten in der Tabelle stehen:
 
-```sql
+```
 SELECT * 
 FROM persons;
 ```{{execute}}

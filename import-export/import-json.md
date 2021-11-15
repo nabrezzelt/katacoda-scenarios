@@ -2,12 +2,12 @@
 
 (Konsole leeren: `\! clear`{{execute}})
 
-PostgeSQL bietet standardmäßig keine Option um JSON-Daten elegant zu importieren.
+PostgreSQL bietet standardmäßig keine Option um JSON-Daten elegant zu importieren.
 
 Dies ist nur über Umwege möglich. Genutzt wird hierzu die Funktion `json_populate_recordset()`
 
 ## Funktion `json_populate_recordset()`
-Die Funktion `json_populate_recordset()` akzeptiert zwei Argumente. Das erste Argument ist der Typ, den die Datensätze der JSON-Datei respräsentieren (in diesem Fall der Typ `persons`, da die Tabelle so benannt ist.)
+Die Funktion `json_populate_recordset()` akzeptiert zwei Argumente. Das erste Argument ist der Typ, den die Datensätze der JSON-Datei repräsentieren (in diesem Fall der Typ `persons`, da die Tabelle so benannt ist.)
 
 Das folgende Statement gibt dann die Datensätze entsprechend ihrer Keys aufgeteilt aus:
 

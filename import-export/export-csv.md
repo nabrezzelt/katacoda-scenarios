@@ -13,14 +13,14 @@ Beispielhaft wird dies an der Tabelle `persons` gezeigt, welche folgenden Aufbau
 
 Grundlegend ist der Aufbau des Befehls folgendermaßen:
 
-```sql
+```
 COPY { table_name | query }
     TO { file_name | STDOUT }
     WITH options
 ```
 
 ### `{table_name | query }`
-Dabei kann im ersten Teil der Abfrage entweder eine Tabellennamen angegeben werden oder eine SQL-Abfrage.
+Dabei kann im ersten Teil der Abfrage entweder einen Tabellennamen angegeben werden oder eine SQL-Abfrage.
 
 Wird nur ein Tabellennamen angegeben, werden alle Spalten in die CSV-Datei geschrieben.
 
@@ -28,7 +28,7 @@ Zusätzlich kann in Klammern angegeben werden ob z. B. nur einzelne Spalten expo
 
 Die folgende Abfrage exportiert nun alle Spalten der Tabelle `persons` und gibt diese auf der Standardausgabe aus. Getrennt werden die Spalten dabei mittels eines `;`.
 
-```sql
+```
 COPY persons
 TO STDOUT (DELIMITER ';');
 ```{{execute}}
@@ -36,7 +36,7 @@ TO STDOUT (DELIMITER ';');
 
 Wenn nur die `Name`-Spalte ausgegeben werden soll:
 
-```sql
+```
 COPY persons(Name)
 TO STDOUT (DELIMITER ';');
 ```{{execute}}
@@ -44,7 +44,7 @@ TO STDOUT (DELIMITER ';');
 
 Zudem ist es möglich auch eine SQL-Abfrage anzugeben, wenn z. B. alle Personen mit einer bestimmten PLZ exportiert werden sollen:
 
-```sql
+```
 COPY (SELECT * FROM persons WHERE ZipCode = 10117)
 TO STDOUT (DELIMITER ';');
 ```{{execute}}
@@ -56,13 +56,13 @@ Im `TO`-Abschnitt der Abfrage kann ausgewählt werden wohin die Daten exportiert
 Im letzten Abschnitt der Abfrage können verschiedene Optionen angegeben werden. Eine der Wichtigsten ist dabei z. B. ob ein Header mit ausgegeben werden soll.
 
 #### `DELIMITER`
-Die `DELIMITER`-Option gibt an, wie die einzelnen Spalten von einander abgetrennt sind.
+Die `DELIMITER`-Option gibt an, wie die einzelnen Spalten voneinander abgetrennt sind.
 
 #### `CSV HEADER`
 Ausgegeben wird dieser durch die Option: `CSV HEADER`
 
 Bsp.:
-```sql
+```
 COPY persons
 TO STDOUT DELIMITER ';' CSV HEADER;
 ```{{execute}}
@@ -70,7 +70,7 @@ TO STDOUT DELIMITER ';' CSV HEADER;
 #### `QUOTE` und `ESCAPE`
 Mittels den Optionen `QUOTE` und `ESCAPE` können Anpassungen der Textbegrenzungszeichen und Escape-Zeichen gemacht werden.
 
-Weitere Informationen zu den sonst unterstützten Optionen des Befehls sind auf der Dokumentationsseite  von PostgreSQL zu finden.
+Weitere Informationen zu den sonst unterstützten Optionen des Befehls sind auf der Dokumentationsseite von PostgreSQL zu finden.
 
 ### Quellen
 - https://www.postgresql.org/docs/14/sql-copy.html
