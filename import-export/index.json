@@ -6,6 +6,10 @@
     "details": {
         "steps": [
             {
+                "title": "JSON und CSV",
+                "text": "json-and-csv-format.md"
+            },
+            {
                 "title": "Export als CSV",
                 "text": "export-csv.md"
             },
