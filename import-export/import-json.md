@@ -72,5 +72,5 @@ Damit die oben genannten Befehle funktionieren müssen folgende Bedingungen erf�
 
 
 ## Quellen
-- https://www.postgresql.org/docs/10/functions-json.html
-- https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-INTERPOLATION
+- The PostgreSQL Global Development Group, “9.15. JSON Functions and Operators,” PostgreSQL Documentation, Aug. 12, 2021. https://www.postgresql.org/docs/10/functions-json.html (accessed Nov. 16, 2021).
+- The PostgreSQL Global Development Group, “psql,” PostgreSQL Documentation, Nov. 11, 2021. https://www.postgresql.org/docs/current/app-psql.html#APP-PSQL-INTERPOLATION (accessed Nov. 16, 2021).

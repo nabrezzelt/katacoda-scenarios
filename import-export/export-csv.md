@@ -73,6 +73,7 @@ Mittels den Optionen `QUOTE` und `ESCAPE` können Anpassungen der Textbegrenzung
 Weitere Informationen zu den sonst unterstützten Optionen des Befehls sind auf der Dokumentationsseite von PostgreSQL zu finden.
 
 ### Quellen
-- https://www.postgresql.org/docs/14/sql-copy.html
-- https://www.postgresqltutorial.com/export-postgresql-table-to-csv-file/
+- The PostgreSQL Global Development Group, “COPY,” PostgreSQL Documentation. https://www.postgresql.org/docs/14/sql-copy.html (accessed Nov. 16, 2021).
+
+- PostgreSQL Tutorial Website, “Export PostgreSQL Table to CSV File,” www.postgresqltutorial.com. https://www.postgresqltutorial.com/export-postgresql-table-to-csv-file/ (accessed Nov. 16, 2021).
 

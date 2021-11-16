@@ -43,5 +43,5 @@ Somit ist sind alle Datensätze in die Datei `/tmp/person-data.json` exportiert 
 ```{{execute}}
 
 ### Quellen
-- https://alphahydrae.com/2021/02/how-to-export-postgresql-data-to-a-json-file/
-- https://www.postgresql.org/docs/14/sql-copy.html
+- S. Oulevay, “How to export PostgreSQL data to a JSON file,” AlphaHydrae, Feb. 10, 2021. https://alphahydrae.com/2021/02/how-to-export-postgresql-data-to-a-json-file/ (accessed Nov. 16, 2021).
+- The PostgreSQL Global Development Group, “COPY,” PostgreSQL Documentation. https://www.postgresql.org/docs/14/sql-copy.html (accessed Nov. 16, 2021).

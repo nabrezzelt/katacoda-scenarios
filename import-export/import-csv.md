@@ -72,5 +72,5 @@ FROM persons;
 
 
 ### Quellen
-- https://www.postgresql.org/docs/14/sql-copy.html
-- https://www.postgresqltutorial.com/import-csv-file-into-posgresql-table/
+- The PostgreSQL Global Development Group, “COPY,” PostgreSQL Documentation. https://www.postgresql.org/docs/14/sql-copy.html (accessed Nov. 16, 2021).
+- PostgreSQL Tutorial Website, “Import CSV File Into PosgreSQL Table,” PostgreSQL Tutorial Website. https://www.postgresqltutorial.com/import-csv-file-into-posgresql-table/.

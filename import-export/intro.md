@@ -13,4 +13,7 @@ Außerdem wird JSON oftmals in NoSQL-Datenbanken eingesetzt, da hier das Schema 
 So ist das Schema sehr flexibel und erst wird erst beim Lesen (schema-on-read) und nicht beim Schreiben (schema-on-write) festgelegt.
 
 <img src="assets/json-for-schemaless-db-design-slide.png" alt="JSON - schemaless future for Database design" style="max-width: 450px; width: 100%; display: block">
-<i style="font-size: 80%">Abbildung 1: JSON - schemaless future for Database design?.</i>
+<i style="font-size: 80%">Abbildung 1: JSON - schemaless future for Database design?. [1]</i>
+
+# Quellen
+- A. Buckenhofer, “Vorlesung: Data Warehouse,” 2021, Duale Hochschule Baden-Württemberg Stuttgart.
