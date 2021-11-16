@@ -2,9 +2,9 @@
 Manchmal können innerhalb des Katacoda-Szenarios die Datenbank und die Testtabelle nicht angelegt werden.
 
 Die Tabelle und Datebank sollte korrekte angelegt sein wenn folgende Ausgabe aus der Konsole erscheint: 
-> CREATE TABLE
-> INSERT 0 3
-> ...
+> CREATE TABLE<br>
+> INSERT 0 3<br>
+> ...<br>
 > You are now connected to database "sample" as user "postgres".
 
 Sollte dies nicht der Fall sein, bitte einfach das Szenario mit `F5` neuladen :)
