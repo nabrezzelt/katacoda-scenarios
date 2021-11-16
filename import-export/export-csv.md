@@ -81,7 +81,7 @@ TO STDOUT DELIMITER ';' CSV HEADER;
 #### `QUOTE` und `ESCAPE`
 Mittels den Optionen `QUOTE` und `ESCAPE` können Anpassungen der Textbegrenzungszeichen und Escape-Zeichen gemacht werden.
 
-Weitere Informationen zu den sonst unterstützten Optionen des Befehls sind auf der Dokumentationsseite von PostgreSQL zu finden.
+Weitere Informationen zu den sonst unterstützten Optionen des Befehls sind auf der [Dokumentationsseite](https://www.postgresql.org/docs/14/sql-copy.html) von PostgreSQL zu finden.
 
 ### Quellen
 - The PostgreSQL Global Development Group, “COPY,” PostgreSQL Documentation. https://www.postgresql.org/docs/14/sql-copy.html (accessed Nov. 16, 2021).
