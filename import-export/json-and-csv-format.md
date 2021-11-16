@@ -51,5 +51,5 @@ Daten können im JSON-Format - im Vergleich zu CSV-Dateien - beliebig oft gescha
 In den nachfolgenden Schritten 2-5 werden Import und Export Beispiele für CSV und JSON-Dateien vorgestellt.
 
 # Quellen
-- https://datatracker.ietf.org/doc/html/rfc4180
-- https://tools.ietf.org/pdf/rfc8259.pdf
+- Y. Shafranovich, “Common Format and MIME Type for Comma-Separated Values (CSV) Files,” IETF, Oct. 01, 2005. https://datatracker.ietf.org/doc/html/rfc4180 (accessed Nov. 16, 2021).
+- T. Bray, “The JavaScript Object Notation (JSON) Data Interchange Format,” IETF, Dec. 2017. https://datatracker.ietf.org/doc/html/rfc8259 (accessed Nov. 16, 2021).
